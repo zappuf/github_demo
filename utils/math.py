@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats as stats
 
-def generate_random_floats(length: int = 1000):
+def generate_random_floats(length: int = 100):
     """
     Generate a list of random floats between 0 and 3000.
 
