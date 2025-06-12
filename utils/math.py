@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats as stats
 
-def generate_random_floats(length: int = 1000):
+def generate_random_floats(length: int = 1000, range_upper: int = 5000):
     """
-    Generate a list of random floats between 0 and 3000.
+    Generate a list of random floats between 0 and 5000. 
 
     Parameters:
     length (int): The number of random floats to generate.
@@ -13,7 +13,7 @@ def generate_random_floats(length: int = 1000):
     Returns:
     list: A list of random float numbers.
     """
-    return [random.uniform(0, 3000) for _ in range(length)]
+    return [random.uniform(0, range_upper) for _ in range(length)]
 
 
 def visualize_normal_distribution(values: list = [], title: str = "Histogram with KDE"):
