@@ -16,7 +16,7 @@ def generate_random_floats(length: int = 1000):
     return [random.uniform(0, 3000) for _ in range(length)]
 
 
-def visualize_normal_distribution(values):
+def visualize_normal_distribution(values: list = [], title: str = "Histogram with KDE"):
     """
     Visualize whether a list of numerical values follows a normal distribution
     using both a histogram with KDE and a Q-Q plot.
@@ -27,6 +27,8 @@ def visualize_normal_distribution(values):
     Returns:
     None
     """
+    if not values:
+        raise ValueError("The list of values is empty. Please provide a list of numerical values.")
     # Sort the values
     values.sort()
 
@@ -35,7 +37,7 @@ def visualize_normal_distribution(values):
 
     # Histogram with KDE
     sns.histplot(values, kde=True, ax=ax[0])
-    ax[0].set_title('Histogram with KDE')
+    ax[0].set_title(title)
     ax[0].set_xlabel('Value')
     ax[0].set_ylabel('Frequency')
 
