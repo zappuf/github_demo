@@ -5,11 +5,11 @@ import scipy.stats as stats
 
 def generate_random_floats(length: int = 1000, range_upper: int = 5000) -> list:
     """
-    Generate a list of random floats between 0 and range_upper. 
+    Generate a list of random floats between 0 and range_upper
 
     Parameters:
     length (int): The number of random floats to generate.
-    range_upper (int): The upper limit for the random float generation.
+    range_upper (int): The upper limit for the random float values.
 
     Returns:
     list: A list of random float numbers.
